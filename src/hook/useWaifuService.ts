@@ -1,6 +1,18 @@
 import { useState } from 'react'
 import axios from 'axios'
 
+export const ExtentionImage={
+    JPEG:'.jpeg',
+    JPG:'.jpg',
+    PNG:'.png',
+    GIF:'.gif',
+    WEBP:'.webp',
+    SVG:'.svg',
+    BMP:'.bmp',
+    ICO:'.ico',
+    TIFF:'.tiff',
+}
+
 export enum WaifuCategoryTypeSFW {
     WAIFU = 'waifu',
     NEKO = 'neko',
@@ -82,7 +94,7 @@ export default function useWaifuService(){
         let response:any
 
         try {
-            if(unique){
+            if(!unique){
                 uri = buildUri({
                     many: true,
                     type,

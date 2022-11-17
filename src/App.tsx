@@ -1,12 +1,4 @@
-import React from 'react';
 import useWaifuService  from './hook/useWaifuService'
-
-
-const WaifuImage = ({url}:{url:string}): JSX.Element => {
-  return (
-    <img src={url} alt="waifu" width='500px' height='auto'/>
-  )
-}
 
 function App() {
   const waifuHook = useWaifuService();
@@ -17,6 +9,7 @@ function App() {
         onClick={
          ()=> {
             waifuHook.getRandomWaifu()
+            console.log(waifuHook.randomWaifu)
           }
         }
       >
@@ -24,9 +17,9 @@ function App() {
         </button>
 
         {
-         <WaifuImage
-          url={waifuHook.randomWaifu}
-         />
+          <img src={waifuHook.randomWaifu} alt="" style={{
+            width: '500px',
+         }}/>
         }
 
         <hr/>
@@ -34,7 +27,7 @@ function App() {
         <button 
           onClick={
             ()=> {
-              waifuHook.getWaifus({type:'sfw', category: 'waifu', unique:true})
+              waifuHook.getWaifus({type:'nsfw', category: 'neko', unique:false})
               console.log(waifuHook.waifusList)
             }
           }
@@ -44,27 +37,29 @@ function App() {
 
         {
           waifuHook.waifusList.map((waifu, index) => {
-            return <WaifuImage url={waifu} key={index}/>
+            return  <img src={waifu} alt="index" key={index} style={{
+              width: '500px',
+           }}/>
           })
         }
 
-        <hr />
+        <hr/>
 
         <button 
           onClick={
             ()=> {
-              waifuHook.getWaifus({type:'sfw', category: 'neko', unique:false})
-              // console.log(waifuHook.waifuUnique)
+              waifuHook.getWaifus({type:'nsfw', category: 'waifu', unique:true})
+              console.log(waifuHook.waifuUnique)
             }
           }
         >
           Get unique of waifu
         </button>
 
-        {
-         <WaifuImage
-          url={waifuHook.waifuUnique}
-         />
+        {         
+         <img src={waifuHook.waifuUnique} alt="index" style={{
+            width: '500px',
+         }}/>
         }
     </div>
   );
