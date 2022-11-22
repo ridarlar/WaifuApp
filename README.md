@@ -31,4 +31,4 @@ Cuando es instanciado el custom hook este retorna un objeto con las siguiente pr
   - category: Tiene que contener un valor homologado segun el enum ```WaifuCategoryTypeSFW``` o ``` WaifuCategoryTypeNSFW ```.
 
 getRandomWaifu():
-- No resive ningun dato de entrada.  
+- No resive ningun dato de entrada..
