@@ -4,21 +4,33 @@
     padding: 0;
     font-family: sans-serif;
   }
+
   body {
     height: 100vh;
     overflow: hidden;
   }
+  
   .footer {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 2rem;
+    padding: 1rem;
     background: purple;
     color: white;
-    font-weight: 500;
+    font-weight: 200;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
+  }
+
+  .footer a{
+    color: #fbff08;
+    text-decoration:none;
+  }
+
+  .footer :hover a{
+    color: #b3b46a;
+
   }
