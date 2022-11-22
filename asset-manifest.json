@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.85def7a0.js",
-    "index.html": "/index.html",
-    "main.85def7a0.js.map": "/static/js/main.85def7a0.js.map"
+    "main.js": "/waifu-app/static/js/main.85def7a0.js",
+    "index.html": "/waifu-app/index.html",
+    "main.85def7a0.js.map": "/waifu-app/static/js/main.85def7a0.js.map"
   },
   "entrypoints": [
     "static/js/main.85def7a0.js"
