@@ -1,28 +1,61 @@
 import "../components/style/header.css"
 
+import { Anchor } from 'antd';
+
+const { Link } = Anchor;
+
 
 const Header = (): JSX.Element =>
     <div className="header">
-        <a className="logo" href="">LOGO</a>
+
+        <div className="logo" >
+            <p >logo</p>
+        </div>
+
         <input type="checkbox" name="" id="menu-bar" />
         <label htmlFor="menu-bar">Menu</label>
+
         <nav className="navbar">
             <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">sfw +</a>
+                <li>
+                    <Link href="#" title="home" />
+                </li>
+                <li>
+                    <Link href="#" title="sfw +" />
                     <ul>
-                        <li><a href="">WUAIFU</a></li>
-                        <li><a href="">NEKO</a></li>
-                        <li><a href="">shinobo</a></li>
-                        <li><a href="">megumin</a></li>
+                        <li>
+                            <Link href="#" title="wuaifu" />
+                        </li>
+                        <li>
+                            <Link href="#" title="neko" />
+                        </li>
+                        <li>
+                            <Link href="#" title="shinobo" />
+                        </li>
+                        <li>
+                            <Link href="#" title="megumin" />
+                        </li>
+
                     </ul>
                 </li>
-                <li><a href="">nsfw +</a>
+                <li>
+                    <Link href="#" title="nsfw +" />
+
                     <ul>
-                        <li><a href="">WUAIFU</a></li>
-                        <li><a href="">NEKO</a></li>
-                        <li><a href="">trap</a></li>
-                        <li><a href="">blowjob</a></li>
+
+                        <li>
+                            <Link href="#" title="wuaifu" />
+                        </li>
+                        <li>
+                            <Link href="#" title="neko" />
+                        </li>
+                        <li>
+                            <Link href="#" title="trap" />
+                        </li>
+                        <li>
+                            <Link href="#" title="blowjob" />
+                        </li>
+
                     </ul>
                 </li>
             </ul>
