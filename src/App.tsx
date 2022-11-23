@@ -1,7 +1,7 @@
-import useWaifuService from './hook/useWaifuService'
+// import useWaifuService from './hook/useWaifuService'
 
 function App() {
-  const waifuHook = useWaifuService();
+  // const waifuHook = useWaifuService();
 
   return (
     <div className="App">
