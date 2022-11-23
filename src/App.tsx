@@ -8,9 +8,9 @@ function App() {
 
   return (
     <div >
-          <Header/>
-          <Background/>
-          <Footer/>
+      <Header />
+      <Background />
+      <Footer />
     </div>
   );
 }
