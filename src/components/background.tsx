@@ -13,13 +13,17 @@ function Background(this: any) {
             <div className='buttonRefect'>
                 <ReloadOutlined
                     onClick={() => {
-                       
+                       waifuHook.getWaifus({
+                        type:'nsfw',
+                        category:'waifu',
+                        unique: false
+                       })
                     }}
-                    style={{ fontSize: '50px', color: '#08c' }} />
+                    style={{ fontSize: '40px', color: '#08c' }} />
             </div>
             {
                 waifuHook.waifusList.map((link, index) => {
-                    return <img alt={link} src={link} key={index} className='image-waifu' />
+                    return <img alt={link} src={link} key={index} className='image-waifu' style={{ width: '160px'}}/>
                 })
             }
         </div>
