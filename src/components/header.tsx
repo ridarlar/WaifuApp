@@ -6,7 +6,7 @@ const { Link } = Anchor;
 
 
 const Header = (): JSX.Element =>
-    <div className="header">
+    <header className="header">
 
         <div className="logo" >
             <p >logo</p>
@@ -60,7 +60,7 @@ const Header = (): JSX.Element =>
                 </li>
             </ul>
         </nav>
-    </div>
+    </header>
 
 
 export default Header;
