@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="App">
-      <button
+      {/* <button
         onClick={
           () => {
             waifuHook.getRandomWaifu()
@@ -60,7 +60,7 @@ function App() {
         <img src={waifuHook.waifuUnique} alt="index" style={{
           width: '500px',
         }} />
-      }
+      } */}
     </div>
   );
 }
