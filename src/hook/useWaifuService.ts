@@ -49,6 +49,7 @@ export default function useWaifuService() {
         if(waifusList.length===0){
             getWaifus({type:'sfw',category:'waifu',unique:false})
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[waifusList]) 
 
     const buildUri = ({
