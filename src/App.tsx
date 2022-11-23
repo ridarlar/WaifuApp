@@ -9,6 +9,7 @@ function App() {
   return (
     <div >
       <Header />
+      <div className='space '></div>
       <Background />
       <Footer />
     </div>

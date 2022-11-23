@@ -1,25 +1,21 @@
-
-
 .header {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
     background-color: purple;
     padding: 0px 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    width: 100%;
+
 }
 
-.header .logo  {
+.header .logo {
     font-weight: bolder;
     font-size: 25px;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
-
 }
 
 .header .navbar ul {
@@ -62,8 +58,8 @@
     top: 0px;
 }
 
-.header .navbar ul li:focus-within > ul,
-.header .navbar ul li:hover > ul {
+.header .navbar ul li:focus-within>ul,
+.header .navbar ul li:hover>ul {
     display: initial;
 }
 
@@ -78,13 +74,13 @@
     display: none;
 }
 
-@media(max-width:991px){
+@media(max-width:991px) {
 
-    .header{
+    .header {
         padding: 1rem;
     }
 
-    .header label{
+    .header label {
         display: initial;
     }
 
@@ -116,7 +112,7 @@
         left: 0px;
     }
 
-    #menu-bar:checked ~ .navbar {
+    #menu-bar:checked~.navbar {
         display: inline;
     }
 }
