@@ -66,7 +66,8 @@ function Background(this: any) {
                     onClose={closeImageViewer}
                     disableScroll={false}
                     backgroundStyle={{
-                        backgroundColor: "rgba(0,0,0,0.9)"
+                        backgroundColor: "rgba(0,0,0,0.9)",
+                        // opacity: "0.2"
                     }}
                     closeOnClickOutside={true}
                 />
