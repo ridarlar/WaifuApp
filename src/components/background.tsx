@@ -39,7 +39,7 @@ function Background(this: any) {
                                     unique: false
                                 })
                             }}
-                            style={{ fontSize: '40px', color: '#08c' }} />
+                             />
                     </div >
                 )
             }

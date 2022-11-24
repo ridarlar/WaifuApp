@@ -1,8 +1,3 @@
-/* .image-waifu {
-    width: 50%;
-    height: 50%;
-} */
-
 .buttonRefect {
     font-size: 16px;
     text-transform: uppercase;
@@ -36,7 +31,7 @@
 }
 
 
- /* gridWrapper */
+/* gridWrapper */
 
 img {
     max-width: 100%;
@@ -45,13 +40,13 @@ img {
     display: inline-block;
 }
 
-.gridWrapper > div {
+.gridWrapper>div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.gridWrapper > div > img {
+.gridWrapper>div>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -68,5 +63,5 @@ img {
 
 .gridWrapper .big {
     grid-column: span 1;
-    grid-row: span 3;
+    grid-row: span 2;
 }
