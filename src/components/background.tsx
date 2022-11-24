@@ -5,7 +5,17 @@ import ImageViewer from "react-simple-image-viewer";
 
 import './style/background.css';
 
-function Background(this: any) {
+function Background({
+    type,
+    category,
+    unique
+}:{
+    type:string,
+    category:string,
+    unique:boolean
+}) {
+
+
     const waifuHook = useWaifuService();
     const [currentImage, setCurrentImage] = useState(0);
     const [isViewerOpen, setIsViewerOpen] = useState(false);
@@ -15,7 +25,6 @@ function Background(this: any) {
         setCurrentImage(index);
         setIsViewerOpen(true);
         setIsViewerClose(false)
-
     }, []);
 
     const closeImageViewer = () => {
@@ -34,10 +43,11 @@ function Background(this: any) {
                         <ReloadOutlined
                             onClick={() => {
                                 waifuHook.getWaifus({
-                                    type: 'sfw',
-                                    category: 'waifu',
-                                    unique: false
+                                    type,
+                                    category,
+                                    unique
                                 })
+                                console.log('clicked!!!!')
                             }}
                             style={{ fontSize: '75px', color: '#08c' }} />
                     </div >
@@ -47,12 +57,12 @@ function Background(this: any) {
             <div className='gridWrapper' >
                 {
                     waifuHook.waifusList.map((link, index) => {
-                        return <div className='big'>
+                        return <div className='big' key={link+index}>
                             <img
                                 onClick={() => openImageViewer(index)}
                                 alt={link}
                                 src={link}
-                                key={index}
+                                key={index+link}
                                 className='image-waifu' />
                         </div>
                     })
@@ -67,7 +77,6 @@ function Background(this: any) {
                     disableScroll={false}
                     backgroundStyle={{
                         backgroundColor: "rgba(0,0,0,0.9)",
-                        // opacity: "0.2"
                     }}
                     closeOnClickOutside={true}
                 />

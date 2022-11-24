@@ -1,16 +1,24 @@
 import Footer from './components/footer';
 import Header from './components/header';
 import './components/style/root.css';
-import Background from './components/background';
+import {
+  Routes,
+  Route,
+  useLocation
+} from 'react-router-dom'
+import React from 'react';
 
 
-function App() {
+function App({backgroundWaifu}:{backgroundWaifu:any}){
+
+  const location=useLocation()
+  console.log(location)
 
   return (
     <div >
       <Header />
       <div className='space '></div>
-      <Background />
+        {backgroundWaifu}
       <Footer />
     </div>
   );

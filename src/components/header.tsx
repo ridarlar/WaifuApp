@@ -18,16 +18,16 @@ const Header = (): JSX.Element =>
         <nav className="navbar">
             <ul>
                 <li>
-                    <Link href="#" title="home" />
+                    <Link href="/" title="home" />
                 </li>
                 <li>
                     <Link href="" title="sfw +" />
                     <ul>
                         <li>
-                            <Link href="#" title="wuaifu" />
+                            <Link href="/waifu-app?type=sfw&category=waifus" title="waifu" />
                         </li>
                         <li>
-                            <Link href="#" title="neko" />
+                            <Link  href= "/waifu-app/sfw/neko" title="neko" />
                         </li>
                         <li>
                             <Link href="#" title="shinobo" />
