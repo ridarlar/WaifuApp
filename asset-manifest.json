@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/waifu-app/static/css/main.1474a7d2.css",
-    "main.js": "/waifu-app/static/js/main.371ce472.js",
+    "main.js": "/waifu-app/static/js/main.8f6096dc.js",
     "index.html": "/waifu-app/index.html",
     "main.1474a7d2.css.map": "/waifu-app/static/css/main.1474a7d2.css.map",
-    "main.371ce472.js.map": "/waifu-app/static/js/main.371ce472.js.map"
+    "main.8f6096dc.js.map": "/waifu-app/static/js/main.8f6096dc.js.map"
   },
   "entrypoints": [
     "static/css/main.1474a7d2.css",
-    "static/js/main.371ce472.js"
+    "static/js/main.8f6096dc.js"
   ]
 }
