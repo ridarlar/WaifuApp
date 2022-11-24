@@ -1,66 +1,68 @@
 import "../components/style/header.css"
 
+
 import { Anchor } from 'antd';
 
 const { Link } = Anchor;
 
 
-const Header = (): JSX.Element =>
-    <header className="header">
+function Header() {
+    return (
+        <header className="header">
 
-        <div className="logo" >
-            <p >logo</p>
-        </div>
+            <div className="logo" >
+                <p></p>
+            </div>
 
-        <input type="checkbox" name="" id="menu-bar" />
-        <label htmlFor="menu-bar">Menu</label>
+            <input type="checkbox" name="" id="menu-bar" />
+            <label htmlFor="menu-bar">Menu</label>
 
-        <nav className="navbar">
-            <ul>
-                <li>
-                    <Link href="/" title="home" />
-                </li>
-                <li>
-                    <Link href="" title="sfw +" />
-                    <ul>
-                        <li>
-                            <Link href="/waifu-app?type=sfw&category=waifus" title="waifu" />
-                        </li>
-                        <li>
-                            <Link  href= "/waifu-app/sfw/neko" title="neko" />
-                        </li>
-                        <li>
-                            <Link href="#" title="shinobo" />
-                        </li>
-                        <li>
-                            <Link href="#" title="megumin" />
-                        </li>
+            <nav className="navbar">
+                <ul>
 
-                    </ul>
-                </li>
-                <li>
-                    <Link href="#" title="nsfw +" />
+                    <li>
+                        <Link href="/" title="sfw +" />
+                        <ul>
 
-                    <ul>
+                            <li>
+                                <Link href="/sfw/neko" title="neko" />
+                            </li>
+                            {/* <li>
+                                <Link href="/sfw/shinobo" title="shinobo" />
+                            </li>
+                            <li>
+                                <Link href="#" title="megumin" />
+                            </li> */}
 
-                        <li>
-                            <Link href="#" title="wuaifu" />
-                        </li>
-                        <li>
-                            <Link href="#" title="neko" />
-                        </li>
-                        <li>
-                            <Link href="#" title="trap" />
-                        </li>
-                        <li>
-                            <Link href="#" title="blowjob" />
-                        </li>
+                        </ul>
+                    </li>
+                    {/* <li>
+                        <Link href="#" title="nsfw +" />
 
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+                        <ul>
+
+                            <li>
+                                <Link href="#" title="wuaifu" />
+                            </li>
+                            <li>
+                                <Link href="#" title="neko" />
+                            </li>
+                            <li>
+                                <Link href="#" title="trap" />
+                            </li>
+                            <li>
+                                <Link href="#" title="blowjob" />
+                            </li>
+
+                        </ul>
+                    </li> */}
+                </ul>
+            </nav>
+        </header>
+    )
+}
+
+
 
 
 export default Header;

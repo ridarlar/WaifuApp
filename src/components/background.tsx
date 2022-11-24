@@ -1,3 +1,5 @@
+
+
 import React, { useState, useCallback } from "react";
 import useWaifuService from '../hook/useWaifuService';
 import { ReloadOutlined } from '@ant-design/icons';
@@ -5,15 +7,7 @@ import ImageViewer from "react-simple-image-viewer";
 
 import './style/background.css';
 
-function Background({
-    type,
-    category,
-    unique
-}:{
-    type:string,
-    category:string,
-    unique:boolean
-}) {
+function Background() {
 
 
     const waifuHook = useWaifuService();
@@ -25,6 +19,7 @@ function Background({
         setCurrentImage(index);
         setIsViewerOpen(true);
         setIsViewerClose(false)
+
     }, []);
 
     const closeImageViewer = () => {
@@ -43,11 +38,10 @@ function Background({
                         <ReloadOutlined
                             onClick={() => {
                                 waifuHook.getWaifus({
-                                    type,
-                                    category,
-                                    unique
+                                    type: 'sfw',
+                                    category: 'neko',
+                                    unique: false
                                 })
-                                console.log('clicked!!!!')
                             }}
                             style={{ fontSize: '75px', color: '#08c' }} />
                     </div >
@@ -57,12 +51,12 @@ function Background({
             <div className='gridWrapper' >
                 {
                     waifuHook.waifusList.map((link, index) => {
-                        return <div className='big' key={link+index}>
+                        return <div className='big' key={link + index}>
                             <img
                                 onClick={() => openImageViewer(index)}
                                 alt={link}
                                 src={link}
-                                key={index+link}
+                                key={index + link}
                                 className='image-waifu' />
                         </div>
                     })
