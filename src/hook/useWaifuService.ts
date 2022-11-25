@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 export enum WaifuCategoryTypeSFW {
     WAIFU = 'waifu',
@@ -45,9 +46,15 @@ export default function useWaifuService() {
     const [waifuUnique, setWaifuUnique] = useState(String)
     const [randomWaifu, setRandomWaifu] = useState(String)
 
+    const {type,category} = useParams()
+
     useEffect(()=>{
         if(waifusList.length===0){
-            getWaifus({type:'sfw',category:'waifu',unique:false})
+            getWaifus(
+                {
+                    unique:false
+                }
+            )
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[waifusList]) 
@@ -80,20 +87,21 @@ export default function useWaifuService() {
             })
         }
         return response
-    }
+    } 
 
-    const getWaifus = async ({ type, category, unique }
-        : { type: string, category: string, unique: boolean }
-    ): Promise<void> => {
+    const getWaifus = async ({unique}: {unique: boolean}): Promise<void> => {
         let uri: string
         let response: any
+
+        let typeContent=type?(type):('sfw')
+        let categoryContent=category?(category):('waifu')
 
         try {
             if (!unique) {
                 uri = buildUri({
                     many: true,
-                    type,
-                    category
+                    type:typeContent,
+                    category:categoryContent
                 })
                 response = await buildQuery({
                     url: uri,
@@ -103,8 +111,8 @@ export default function useWaifuService() {
             } else {
                 uri = buildUri({
                     many: false,
-                    type,
-                    category
+                    type:typeContent,
+                    category:categoryContent
                 })
                 response = await buildQuery({
                     url: uri,

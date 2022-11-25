@@ -61,7 +61,11 @@
 .header .navbar ul li:focus-within>ul,
 .header .navbar ul li:hover>ul {
     display: initial;
+    max-height: 250px;
+    overflow-y: scroll;
+    max-width: 150px;
 }
+
 
 #menu-bar {
     display: none;

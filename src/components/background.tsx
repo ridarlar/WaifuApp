@@ -4,11 +4,11 @@ import React, { useState, useCallback } from "react";
 import useWaifuService from '../hook/useWaifuService';
 import { ReloadOutlined } from '@ant-design/icons';
 import ImageViewer from "react-simple-image-viewer";
-
 import './style/background.css';
+import { useEffect } from "react";
+import { useLocation, useParams } from "react-router-dom";
 
 function Background() {
-
 
     const waifuHook = useWaifuService();
     const [currentImage, setCurrentImage] = useState(0);
@@ -29,17 +29,24 @@ function Background() {
 
     };
 
+    const location=useLocation()
+
+    useEffect(()=>{
+        waifuHook.getWaifus({
+            unique: false
+        })
+        
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[location])
+
     return (
         <section>
-
             {
                 isViewerClose && (
                     <div className='buttonRefect'>
                         <ReloadOutlined
                             onClick={() => {
                                 waifuHook.getWaifus({
-                                    type: 'sfw',
-                                    category: 'neko',
                                     unique: false
                                 })
                             }}
@@ -47,7 +54,6 @@ function Background() {
                     </div >
                 )
             }
-
             <div className='gridWrapper' >
                 {
                     waifuHook.waifusList.map((link, index) => {

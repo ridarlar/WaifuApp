@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background-color: transparent;
 }
 
 .space {
