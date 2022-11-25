@@ -17,13 +17,13 @@ function App() {
         <div>
           <Routes>
             <Route
-              path="/"
+              path="/waifu-app"
               element={
                 <Background />
               }
             />
             <Route
-              path="/:type/:category"
+              path="/waifu-app/:type/:category"
               element={<Background />}
             />
 

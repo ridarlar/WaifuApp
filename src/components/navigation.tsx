@@ -58,7 +58,7 @@ function Navigation() {
                             navMenu[0].categories.map((category,index) => {
                                 return (
                                     <li key={category+index}>
-                                        <Link to={`/${navMenu[0].type}/${category}`}>
+                                        <Link to={`/waifu-app/${navMenu[0].type}/${category}`}>
                                             {category}
                                         </Link>
                                     </li>
@@ -80,7 +80,7 @@ function Navigation() {
                             navMenu[1].categories.map((category,index) => {
                                 return (
                                     <li className='dos' key={category+index}>
-                                        <Link to={`/${navMenu[1].type}/${category}`}>
+                                        <Link to={`/waifu-app/${navMenu[1].type}/${category}`}>
                                             {category}
                                         </Link>
                                     </li>
