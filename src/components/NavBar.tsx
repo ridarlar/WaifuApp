@@ -31,10 +31,10 @@ function Navbar() {
     return (
         <>
             <nav className='navbar'>
-                <Link 
-                to='/waifu-app' 
-                className='navbar-logo' 
-                onClick={closeMobileMenu}>
+                <Link
+                    to='/waifu-app'
+                    className='navbar-logo'
+                    onClick={closeMobileMenu}>
                     WAIFU APP
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
@@ -48,7 +48,7 @@ function Navbar() {
                         onMouseLeave={onMouseLeave}
                     >
                         <Link
-                              style={{ pointerEvents: 'none', textDecoration: 'none' }}
+                            style={{ pointerEvents: 'none', textDecoration: 'none' }}
 
                             to='/waifu-app'
                             className='nav-links'
@@ -59,15 +59,15 @@ function Navbar() {
                         {dropdown && <Dropdown />}
                     </li>
 
-                    {/* <li className='nav-item'>
+                    <li className='nav-item'>
                         <Link
-                            to='/contact-us'
+                            to='/waifu-app/information'
                             className='nav-links'
                             onClick={closeMobileMenu}
                         >
-                            Contact Us
+                            INFO
                         </Link>
-                    </li> */}
+                    </li>
 
                 </ul>
             </nav>

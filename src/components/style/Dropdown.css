@@ -4,12 +4,10 @@
   background-repeat: no-repeat;
   position: absolute;
   top: 80px;
+
   list-style: none;
-  text-align: start;
   max-height: 250px;
   overflow-y: scroll;
-  max-width: 150px;
-  /* text-align: center; */
 }
 
 .dropdown-menu li {
@@ -26,11 +24,13 @@
 
 
 .dropdown-link {
+  left: 0px;
   display: block;
   text-decoration: none;
   color: white;
   padding: 5px;
   font-weight: bold;
+  text-align: start;
 }
 
 @media screen and (max-width: 960px) {

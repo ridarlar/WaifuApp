@@ -46,6 +46,7 @@ function Dropdown() {
             ]
         }
     ]
+    
 
     return (
         < >
@@ -59,7 +60,7 @@ function Dropdown() {
                             <li
                                 key={category + index}>
                                 <Link
-className='dropdown-link'
+                                    className='dropdown-link'
                                     onClick={() => setClick(false)}
                                     to={`/waifu-app/${navMenu[0].type}/${category}`}
                                 >
@@ -70,6 +71,7 @@ className='dropdown-link'
                     })
                 }
             </ul>
+
 
         </>
     );
