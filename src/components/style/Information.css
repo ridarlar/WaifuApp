@@ -7,13 +7,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: 33.2vh;
 }
 
 .left,
 .right {
     width: 50%;
-    height: 55vh;
+    height: 52vh;
     display: flex;
     align-items: center;
 }
@@ -36,6 +36,7 @@
         flex-direction: column;
     }
 
+    .center,
     .right,
     .left {
         width: 100%;
