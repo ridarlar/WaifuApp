@@ -12,7 +12,7 @@ function Navbar() {
 
     const onMouseEnter = () => {
         if (window.innerWidth < 960) {
-            setDropdown(false);
+            setDropdown(true);
         } else {
             setDropdown(true);
         }
@@ -49,7 +49,6 @@ function Navbar() {
                     >
                         <Link
                             style={{ pointerEvents: 'none', textDecoration: 'none' }}
-
                             to='/waifu-app'
                             className='nav-links'
                             onClick={closeMobileMenu}
@@ -59,7 +58,8 @@ function Navbar() {
                         {dropdown && <Dropdown />}
                     </li>
 
-                    <li className='nav-item'>
+{/* Pagina pendiente // NO ELIMINAR   */}
+                    {/* <li className='nav-item'>
                         <Link
                             to='/waifu-app/information'
                             className='nav-links'
@@ -67,7 +67,7 @@ function Navbar() {
                         >
                             INFO
                         </Link>
-                    </li>
+                    </li> */}
 
                 </ul>
             </nav>

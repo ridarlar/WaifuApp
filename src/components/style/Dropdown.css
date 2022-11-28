@@ -3,8 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  top: 80px;
-
+  top: 60px;
   list-style: none;
   max-height: 250px;
   overflow-y: scroll;
@@ -34,7 +33,23 @@
 }
 
 @media screen and (max-width: 960px) {
+
   .fa-caret-down {
     display: none;
   }
+
+  .dropdown-menu {
+    float: left;
+    width: 83%;
+    max-height: 150px ;
+    padding: 10px;
+    overflow-y: hidden;
+    top: 50px;
+
+  }
+
+  .dropdown-menu li {
+    float: left;
+  }
+
 }
