@@ -1,0 +1,40 @@
+.dropdown-menu {
+  background-image: url(https://w0.peakpx.com/wallpaper/285/196/HD-wallpaper-anime-girl-anime-girl-cute-girl-sky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 80px;
+  list-style: none;
+  text-align: start;
+  max-height: 250px;
+  overflow-y: scroll;
+  max-width: 150px;
+  /* text-align: center; */
+}
+
+.dropdown-menu li {
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #5cabff;
+}
+
+.dropdown-menu.clicked {
+  display: none;
+}
+
+
+.dropdown-link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+  .fa-caret-down {
+    display: none;
+  }
+}

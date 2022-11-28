@@ -3,7 +3,7 @@
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 50px;
-    background-color: purple;
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     padding: 8px;
     position: fixed;
     bottom: 40px;

@@ -1,21 +1,19 @@
-import Footer from './components/footer';
-import Header from './components/header';
-import './components/style/root.css';
-import Background from './components/background';
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+import Background from "./components/Background";
+import Navbar from "./components/NavBar";
 
 function App() {
 
   return (
-    <div >
-      <Router>
-        <Header />
-        <div>
-          <Routes>
+    <Router>
+      <Navbar/>
+      <div>
+      <Routes>
             <Route
               path="/waifu-app"
               element={
@@ -28,12 +26,8 @@ function App() {
             />
 
           </Routes>
-        </div>
-        <Footer />
-
-      </Router>
-
-    </div>
+      </div>
+    </Router>
   );
 }
 

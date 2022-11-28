@@ -4,9 +4,9 @@ import React, { useState, useCallback } from "react";
 import useWaifuService from '../hook/useWaifuService';
 import { ReloadOutlined } from '@ant-design/icons';
 import ImageViewer from "react-simple-image-viewer";
-import './style/background.css';
+import './style/Background.css';
 import { useEffect } from "react";
-import { useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Background() {
 
@@ -29,15 +29,15 @@ function Background() {
 
     };
 
-    const location=useLocation()
+    const location = useLocation()
 
-    useEffect(()=>{
+    useEffect(() => {
         waifuHook.getWaifus({
             unique: false
         })
-        
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[location])
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location])
 
     return (
         <section>
@@ -50,7 +50,7 @@ function Background() {
                                     unique: false
                                 })
                             }}
-                            style={{ fontSize: '75px', color: '#08c' }} />
+                            style={{ fontSize: '75px', color: 'white' }} />
                     </div >
                 )
             }
