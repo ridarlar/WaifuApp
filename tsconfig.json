@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "typeRoots": ["node_modules/@types/@types", "src/types"],
     "target": "es5",
     "lib": [
       "dom",
@@ -22,5 +23,8 @@
   },
   "include": [
     "src"
+  ], 
+  "types":[
+    "webpack-env"
   ]
 }
