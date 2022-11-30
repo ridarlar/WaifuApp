@@ -73,7 +73,7 @@
         flex-direction: column;
         margin: 10px;
         max-height: 150px;
-        width: 92%;
+        width: 93%;
         text-align: center;
         position: absolute;
         top: 80px;
@@ -87,7 +87,6 @@
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
-        z-index: 1;
     }
 
     .nav-links {
