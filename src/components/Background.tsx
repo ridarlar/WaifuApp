@@ -53,10 +53,13 @@ function Background() {
                     </div >
                 )
             }
+            <div className='spaceDvi1' />
+
             <div className='gridWrapper' >
                 {
                     waifuHook.waifusList.map((link, index) => {
                         return <div className='big' key={link + index}>
+
                             <img
                                 onClick={() => openImageViewer(index)}
                                 alt={link}

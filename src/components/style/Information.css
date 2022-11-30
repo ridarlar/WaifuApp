@@ -6,6 +6,10 @@ h2 {
     font-size: 25px;
 }
 
+.spaceDvi {
+    margin-top: 90px;
+
+}
 
 .center {
     display: flex;

@@ -4,13 +4,13 @@ import './style/Information.css';
 //     {
 //         name: 'Alberto Garcia',
 //         avatar: '',
-// socialMedia: [
-//     {
-//         name: 'Facebook',
-//         url: 'facebook.com',
-//         icon: ''
-//     }
-// ]
+        // socialMedia: [
+        //     {
+        //         name: 'Facebook',
+        //         url: 'facebook.com',
+        //         icon: ''
+        //     }
+        // ]
 //     }
 // ]
 
@@ -53,14 +53,14 @@ const Profile = ({
 function Information() {
     return (
         <>
-            <div style={{ padding: '5px', }} />
+                    <div className='spaceDvi' />
 
             <div className="center">
                 <Profile
                     styles='borderImg'
                     avatar='https://raw.githubusercontent.com/RamCode1621/waifu-app/master/src/assets/power_by.png'
                 />
-
+                
             </div>
 
             <div className="container">
@@ -81,7 +81,7 @@ function Information() {
                         profesional='frontend'
 
                     />
-
+                    
                 </div>
             </div>
         </>
