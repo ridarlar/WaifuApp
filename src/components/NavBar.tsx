@@ -7,8 +7,8 @@ import useActionMenu from '../hook/useActionMenu';
 
 function Navbar() {
 
-    const firstNav= useActionMenu()
-    const secondNav= useActionMenu()
+    const firstNav = useActionMenu()
+    const secondNav = useActionMenu()
 
     const [click, setClick] = useState(false);
 
@@ -104,7 +104,7 @@ function Navbar() {
                     </li>
 
                     {/* Pagina pendiente // NO ELIMINAR   */}
-                    
+
                     <li className='nav-item'>
                         <Link
                             to='/waifu-app/information'

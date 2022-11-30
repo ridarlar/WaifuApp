@@ -39,12 +39,14 @@
   }
 
   .dropdown-menu {
-    float: left;
-    width: 88.5%;
-    max-height: 150px ;
+    /* float: left; */
+    width: 40%;
+    max-height: 190px;
     padding: 10px;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
     top: 50px;
+    right: 10px;
 
   }
 
@@ -52,4 +54,16 @@
     float: left;
   }
 
+}
+
+@media screen and (max-width: 560px) {
+
+  .dropdown-menu {
+    right: 25px;
+    max-width: 135px;
+    overflow-x:hidden ;
+    overflow-y: scroll;
+
+  }
+  
 }

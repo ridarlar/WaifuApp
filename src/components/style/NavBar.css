@@ -4,8 +4,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 99%;
 }
 
 .navbar-logo {
@@ -31,6 +37,7 @@
     width: 70vw;
     justify-content: end;
     margin-right: 2rem;
+
 }
 
 .nav-item {
@@ -72,8 +79,8 @@
         display: flex;
         flex-direction: column;
         margin: 10px;
-        max-height: 150px;
-        width: 93.7%;
+        height: 175px;
+        width: 94%;
         text-align: center;
         position: absolute;
         top: 80px;
@@ -142,7 +149,19 @@
         transition: 250ms;
     }
 
+    .nav-links:hover {
+        background-color: transparent;
+    }
+
     button {
         display: none;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+
+    .nav-menu {
+        width: 88%;
     }
 }

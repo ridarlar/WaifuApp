@@ -1,49 +1,87 @@
 import './style/Information.css';
 
-import frontend from '../assets/frontend.jpeg';
-import powerBy from '../assets/power_by.png';
-import backend from '../assets/backend.jpg';
-import { BackTop } from 'antd';
+// const dataForProfintiles = [
+//     {
+//         name: 'Alberto Garcia',
+//         avatar: '',
+// socialMedia: [
+//     {
+//         name: 'Facebook',
+//         url: 'facebook.com',
+//         icon: ''
+//     }
+// ]
+//     }
+// ]
 
-
-interface ISocialMedia{
-    name:string,
-    url:string,
-    icon:string
+interface ISocialMedia {
+    name: string,
+    profesional: string,
+    url: string,
+    icon: string
 }
 
-const Profile=({
+const Profile = ({
     name,
+    profesional,
     socialMedia,
     avatar,
-}:{
-    name?:string,
-    socialMedia?:ISocialMedia[],
-    avatar:any
-})=>{
-    return(<div>
-        <img
-            alt='ohkujh'
-            src={avatar}
-        />
-    </div>)
+    styles
+}: {
+    name?: string,
+    profesional?: string,
+    socialMedia?: ISocialMedia[],
+    avatar: any,
+    styles?: string
+}) => {
+    return (
+        <div>
+            <img
+                alt='img'
+                src={avatar}
+                className={styles}
+            />
+            <h2> {name}  {profesional} </h2>
+            {
+                socialMedia?.map((socialMedia) => {
+                    return <a href={socialMedia.url} rel="noopener" className={socialMedia.icon}>{socialMedia.name}</a>
+                })
+            }
+        </div>)
 }
-
 
 function Information() {
     return (
         <>
-            <div className="center">
-                <p>power by</p>
-            </div>
-            <div className="container">
+            <div style={{ padding: '5px', }} />
 
+            <div className="center">
+                <Profile
+                    styles='borderImg'
+                    avatar='https://raw.githubusercontent.com/RamCode1621/waifu-app/master/src/assets/power_by.png'
+                />
+
+            </div>
+
+            <div className="container">
                 <div className="left">
                     <Profile
-                       avatar='https://i.waifu.pics/3_7mVJQ.gif'
+                        styles='Img'
+                        avatar='https://raw.githubusercontent.com/RamCode1621/waifu-app/master/src/assets/backend.jpg'
+                        name='Richard Aguilar /'
+                        profesional='backend'
                     />
+
                 </div>
                 <div className="right">
+                    <Profile
+                        styles='Img'
+                        avatar='https://raw.githubusercontent.com/RamCode1621/waifu-app/master/src/assets/frontend.jpeg'
+                        name='Alberto Guaman /'
+                        profesional='frontend'
+
+                    />
+
                 </div>
             </div>
         </>

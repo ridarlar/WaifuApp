@@ -2,26 +2,43 @@
     display: flex;
 }
 
+h2 {
+    font-size: 25px;
+}
+
+
 .center {
-    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 33.2vh;
+    height: 33.7vh;
+    color: #333;
+}
+
+.borderImg {
+    height: 200px;
+    width: 100%;
+    border: 10px solid black;
+}
+
+.Img {
+    border-radius: 50%;
+    height: 200px;
 }
 
 .left,
 .right {
     width: 50%;
-    height: 52vh;
+    height: 50vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .left {
     color: #eee;
     background-color: #333;
-    justify-content: flex-end;
 }
 
 .right {
