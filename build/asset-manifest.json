@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/waifu-app/static/css/main.157cd583.css",
+    "main.js": "/waifu-app/static/js/main.d9b153cd.js",
+    "index.html": "/waifu-app/index.html",
+    "main.157cd583.css.map": "/waifu-app/static/css/main.157cd583.css.map",
+    "main.d9b153cd.js.map": "/waifu-app/static/js/main.d9b153cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.157cd583.css",
+    "static/js/main.d9b153cd.js"
+  ]
+}

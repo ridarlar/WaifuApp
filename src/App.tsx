@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route
             path="/waifu-app"
-            element={
+            element={ 
               <Background />
             }
           />
